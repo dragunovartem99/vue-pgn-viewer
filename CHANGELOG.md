@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.1.3
+
+### Patch Changes
+
+- Improve a11y (alt for image) for npm README
+
 ## 0.1.2
 
 ### Patch Changes
