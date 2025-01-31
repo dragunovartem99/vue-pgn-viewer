@@ -1,2 +1,3 @@
 import type { PgnViewerApi } from "./pgn-viewer-api";
-export type { PgnViewerApi };
+import type { PgnViewerConfig } from "./pgn-viewer-config";
+export type { PgnViewerApi, PgnViewerConfig };

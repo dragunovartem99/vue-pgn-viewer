@@ -1,15 +1,16 @@
 import { LichessPgnViewer } from "./LichessPgnViewer";
+import type { PgnViewerConfig } from "../types";
 
 export class VuePgnViewer {
-	private options;
+	private config;
 	private viewer?: LichessPgnViewer;
 
-	constructor(options: any) {
-		this.options = options;
+	constructor(config: PgnViewerConfig) {
+		this.config = config;
 	}
 
 	mount(element: HTMLElement) {
-		this.viewer = new LichessPgnViewer(element, this.options);
+		this.viewer = new LichessPgnViewer(element, this.config);
 	}
 
 	get api() {
