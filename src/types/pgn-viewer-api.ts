@@ -1,4 +1,4 @@
-export interface LichessPgnViewer {
+export interface PgnViewerApi {
 	pane: string; // "board" | "menu" | "pgn"
 	flipped: boolean;
 	analysisUrl(): string;

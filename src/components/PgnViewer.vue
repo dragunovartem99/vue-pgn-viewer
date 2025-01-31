@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { VuePgnViewer } from "../objects/VuePgnViewer";
-import { type LichessPgnViewer } from "../types/lichess-pgn-viewer";
+import { type PgnViewerApi } from "../types/pgn-viewer-api";
 
 const props = defineProps<{
 	config?: any;
 }>();
 
 const emit = defineEmits<{
-	(e: "ready", viewer: LichessPgnViewer): void;
+	(e: "ready", api: PgnViewerApi): void;
 }>();
 
 const board = ref<HTMLElement | null>(null);

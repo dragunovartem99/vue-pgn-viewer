@@ -1,19 +1,18 @@
-import createPgnViewer from "lichess-pgn-viewer";
-import type { LichessPgnViewer } from "../types/lichess-pgn-viewer";
+import { LichessPgnViewer } from "./LichessPgnViewer";
 
 export class VuePgnViewer {
 	private options;
-	private pgnViewer?: LichessPgnViewer;
+	private viewer?: LichessPgnViewer;
 
 	constructor(options: any) {
 		this.options = options;
 	}
 
 	mount(element: HTMLElement) {
-		this.pgnViewer = createPgnViewer(element, this.options);
+		this.viewer = new LichessPgnViewer(element, this.options);
 	}
 
 	get api() {
-		return this.pgnViewer;
+		return this.viewer?.api;
 	}
 }
