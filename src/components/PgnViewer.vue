@@ -3,12 +3,16 @@ import { ref, onMounted } from "vue";
 import { VuePgnViewer } from "../objects/VuePgnViewer";
 import { type LichessPgnViewer } from "../types/lichess-pgn-viewer";
 
+const props = defineProps<{
+	config?: any;
+}>();
+
 const emit = defineEmits<{
 	(e: "ready", viewer: LichessPgnViewer): void;
 }>();
 
 const board = ref<HTMLElement | null>(null);
-const viewer = new VuePgnViewer({});
+const viewer = new VuePgnViewer(props.config || {});
 
 function mountPgnViewer() {
 	if (!board.value) {
