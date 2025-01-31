@@ -1,5 +1,5 @@
 import createPgnViewer from "lichess-pgn-viewer";
-import type { LichessPgnViewer } from "../types/lichess-pgn-viewer.ts";
+import type { LichessPgnViewer } from "../types/lichess-pgn-viewer";
 
 export class VuePgnViewer {
 	private options;

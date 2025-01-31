@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { VuePgnViewer } from "../objects/VuePgnViewer";
-import { type LichessPgnViewer } from "../types/lichess-pgn-viewer.ts";
+import { type LichessPgnViewer } from "../types/lichess-pgn-viewer";
 
 const emit = defineEmits<{
 	(e: "ready", viewer: LichessPgnViewer): void;
