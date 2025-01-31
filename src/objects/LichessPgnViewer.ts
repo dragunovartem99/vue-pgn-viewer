@@ -1,5 +1,5 @@
 import createPgnViewer from "lichess-pgn-viewer";
-import { type PgnViewerApi } from "../types/pgn-viewer-api";
+import { type PgnViewerApi } from "../types";
 
 export class LichessPgnViewer {
 	private viewer: PgnViewerApi;

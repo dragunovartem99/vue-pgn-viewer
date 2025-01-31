@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { VuePgnViewer } from "../objects/VuePgnViewer";
-import { type PgnViewerApi } from "../types/pgn-viewer-api";
+import { type PgnViewerApi } from "../types";
 
 const props = defineProps<{
 	config?: any;
