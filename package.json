@@ -2,7 +2,7 @@
 	"name": "vue-pgn-viewer",
 	"description": "Vue 3 wrapper around official Lichess PGN viewer",
 	"license": "GPL-3.0-or-later",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": "Artem Dragunov <dragunovartem99@gmail.com>",
 	"type": "module",
 	"files": [

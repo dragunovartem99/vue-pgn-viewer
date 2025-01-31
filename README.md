@@ -10,4 +10,4 @@ For more dynamic approach, you should look in this directions:
 - [lichess-org/chessground](https://github.com/lichess-org/chessground)
 - [qwerty084/vue3-chessboard](https://github.com/qwerty084/vue3-chessboard), which is a wrapper around "chessground"
 
-[cover](https://github.com/user-attachments/assets/4a643492-6373-4dfb-9714-c4497df08457)
+![cover](https://github.com/user-attachments/assets/4a643492-6373-4dfb-9714-c4497df08457)
