@@ -6,6 +6,18 @@
 	"version": "0.0.0",
 	"author": "Artem Dragunov <dragunovartem99@gmail.com>",
 	"type": "module",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/vue-pgn-viewer.umd.cjs",
+	"module": "./dist/vue-pgn-viewer.js",
+	"types": "./dist/vue-pgn-viewer.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/vue-pgn-viewer.js",
+			"require": "./dist/vue-pgn-viewer.umd.cjs"
+		}
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc -b && vite build",
