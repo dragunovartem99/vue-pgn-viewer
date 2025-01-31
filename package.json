@@ -1,7 +1,7 @@
 {
 	"name": "vue-pgn-viewer",
-	"description": "Lichess PGN viewer wrapper for Vue 3",
-	"license": "MIT",
+	"description": "Lichess's PGN Viewer for Vue 3",
+	"license": "GPL-3.0-or-later",
 	"private": true,
 	"version": "0.0.0",
 	"author": "Artem Dragunov <dragunovartem99@gmail.com>",
