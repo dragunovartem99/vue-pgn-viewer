@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import LichessPgnViewer from "lichess-pgn-viewer";
 
+const emit = defineEmits(["mount"]);
 const board = ref<HTMLElement | null>(null);
 
 onMounted(() => {
@@ -9,7 +10,8 @@ onMounted(() => {
 		throw new Error("Can't mount the PGN viewer");
 	}
 
-	LichessPgnViewer(board.value, {});
+	const api = LichessPgnViewer(board.value, {});
+	emit("mount", api);
 });
 </script>
 
