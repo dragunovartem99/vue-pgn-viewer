@@ -1,5 +1,11 @@
-# Vue 3 + TypeScript + Vite
+# Vue PGN Viewer
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Vue 3 wrapper around official [**Lichess PGN Viewer**](https://github.com/lichess-org/pgn-viewer)
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+> [!NOTE]
+> PGN viewer widget is designed to be embedded in content pages.  
+> This won't replace a fully featured analysis board.
+
+For more dynamic approach, you should look in this directions:
+- [lichess-org/chessground](https://github.com/lichess-org/chessground)
+- [qwerty084/vue3-chessboard](https://github.com/qwerty084/vue3-chessboard), which is a wrapper around "chessground"
