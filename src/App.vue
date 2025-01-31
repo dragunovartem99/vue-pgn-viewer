@@ -9,7 +9,7 @@ const pgn = `
 
 <template>
 	<div>
-		<PgnViewer :config="{ pgn: pgn }" />
+		<PgnViewer :config="{ pgn }" />
 	</div>
 </template>
 
