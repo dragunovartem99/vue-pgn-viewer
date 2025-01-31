@@ -8,14 +8,12 @@ const pgn = `
 </script>
 
 <template>
-	<div>
-		<PgnViewer :config="{ pgn }" />
-	</div>
+	<PgnViewer :config="{ pgn }" />
 </template>
 
 <style>
-div {
-	--board-color: mediumseagreen; /* fallback: */
+cg-board {
+	--board-color: mediumseagreen; /* fallback */
 	--board-color-light: #33a06f;
 	--board-color-dark: #1d704b;
 }
