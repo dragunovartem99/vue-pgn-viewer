@@ -19,14 +19,14 @@ div {
 	--board-color-light: #33a06f;
 	--board-color-dark: #1d704b;
 }
-cg-board::after {
-	/* just for demonstation */
+
+/* floating vue logo */
+.lpv:not(.lpv--menu) cg-board::after {
 	content: "";
+	background: url("./assets/vue-icon.svg") no-repeat center/16%;
 	position: absolute;
 	inset: 0;
-	background: url("./assets/vue-icon.svg") no-repeat center/16%;
-	opacity: 0.8;
 	z-index: 8;
-	filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.8));
+	filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.8)) opacity(80%);
 }
 </style>
