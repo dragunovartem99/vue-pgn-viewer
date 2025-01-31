@@ -1,3 +1,3 @@
-const something = 123;
+import PgnViewer from "./components/PgnViewer.vue";
 
-export { something };
+export { PgnViewer };

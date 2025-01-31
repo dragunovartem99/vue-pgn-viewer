@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PgnViewer from "./components/PgnViewer.vue";
+</script>
 
-<template></template>
-
-<style scoped></style>
+<template>
+	<PgnViewer :age="18" />
+</template>
