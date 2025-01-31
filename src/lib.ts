@@ -1,2 +1,5 @@
+import "./assets/lichess-pgn-viewer.css";
 import PgnViewer from "./components/PgnViewer.vue";
-export { PgnViewer };
+import type { PgnViewerApi, PgnViewerConfig } from "./types";
+
+export { PgnViewer, type PgnViewerApi, type PgnViewerConfig };
