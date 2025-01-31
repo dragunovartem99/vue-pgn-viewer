@@ -1,21 +1,30 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import createPgnViewer from "lichess-pgn-viewer";
+import { VuePgnViewer } from "../objects/VuePgnViewer";
 import { type LichessPgnViewer } from "../types/lichess-pgn-viewer.ts";
 
 const emit = defineEmits<{
-	(e: "mount", viewer: LichessPgnViewer): void;
+	(e: "ready", viewer: LichessPgnViewer): void;
 }>();
 
 const board = ref<HTMLElement | null>(null);
+const viewer = new VuePgnViewer({});
 
-onMounted(() => {
+function mountPgnViewer() {
 	if (!board.value) {
 		throw new Error("Can't mount the PGN viewer");
 	}
 
-	const viewer = createPgnViewer(board.value, {});
-	emit("mount", viewer);
+	viewer.mount(board.value);
+}
+
+function exposeApi() {
+	viewer.api && emit("ready", viewer.api);
+}
+
+onMounted(() => {
+	mountPgnViewer();
+	exposeApi();
 });
 </script>
 

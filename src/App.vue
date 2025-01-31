@@ -3,5 +3,5 @@ import PgnViewer from "./components/PgnViewer.vue";
 </script>
 
 <template>
-	<PgnViewer />
+	<PgnViewer @ready="(v) => v.analysisUrl()" />
 </template>
