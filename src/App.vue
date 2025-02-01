@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import "../dist/vue-pgn-viewer.css";
-import { PgnViewer } from "../dist/vue-pgn-viewer.js";
+import "./assets/lichess-pgn-viewer.css";
+import "./assets/flexible-coloring.css";
+import PgnViewer from "./components/PgnViewer.vue";
 
 const pgn = `
 1. e4 e5 2. d4 exd4 3. Nf3 Nc6
