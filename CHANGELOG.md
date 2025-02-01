@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.1.4
+
+### Patch Changes
+
+- Removed wrong path from src, added web preview option (Github Pages)
+
 ## 0.1.3
 
 ### Patch Changes
