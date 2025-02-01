@@ -21,7 +21,8 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc -b && vite build",
-		"preview": "vite preview",
+		"preview": "vite preview -c web.config.ts",
+		"web": "vue-tsc -b && vite build -c web.config.ts",
 		"format": "prettier . --write"
 	},
 	"dependencies": {
