@@ -22,7 +22,7 @@ cg-board {
 /* floating vue logo */
 .lpv:not(.lpv--menu) cg-board::after {
 	content: "";
-	background: url("./assets/vue-icon.svg") no-repeat center/16%;
+	background: url("./assets/vue.svg") no-repeat center/16%;
 	position: absolute;
 	inset: 0;
 	z-index: 8;
