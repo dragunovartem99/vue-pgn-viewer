@@ -2,14 +2,20 @@
 import "../assets/lichess-pgn-viewer.css";
 import "../assets/flexible-coloring.css";
 import PgnViewer from "../components/PgnViewer.vue";
+import type { PgnViewerConfig } from "../types";
 
 const pgn = `
 1. e4 e5 2. d4 exd4 3. Nf3 Nc6
 `;
+
+const config: PgnViewerConfig = {
+	pgn,
+	initialPly: 6,
+};
 </script>
 
 <template>
-	<PgnViewer :config="{ pgn }" />
+	<PgnViewer :config="config" />
 </template>
 
 <style>

@@ -7,7 +7,7 @@ const props = defineProps<ComponentProps>();
 const emit = defineEmits<ComponentEmits>();
 
 const board = ref<TemplateRef>(null);
-const viewer = new VuePgnViewer(props.config);
+const viewer = new VuePgnViewer({ ...props.config });
 
 const mountPgnViewer = () => board.value && viewer.mount(board.value);
 const exposeApi = () => viewer.api && emit("ready", viewer.api);
