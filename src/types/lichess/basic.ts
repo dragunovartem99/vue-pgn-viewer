@@ -18,24 +18,18 @@ export type ShowMoves = false | "right" | "bottom" | "auto";
 export type ShowPlayers = true | false | "auto";
 export type Lichess = string | false;
 
-type Clocks = {
-	white?: number;
-	black?: number;
-};
+type Clocks = { white?: number; black?: number };
 
-interface Player {
+type Player = {
 	name?: string;
 	title?: string;
 	rating?: number;
 	isLichessUser: boolean;
-}
+};
 
-export interface Players {
-	white: Player;
-	black: Player;
-}
+export type Players = { white: Player; black: Player };
 
-export interface Metadata {
+export type Metadata = {
 	externalLink?: string;
 	isLichess: boolean;
 	timeControl?: {
@@ -44,7 +38,7 @@ export interface Metadata {
 	};
 	orientation?: Color;
 	result?: string;
-}
+};
 
 export interface InitialOrMove {
 	fen: FEN;
