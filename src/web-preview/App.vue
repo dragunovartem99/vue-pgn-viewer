@@ -5,17 +5,18 @@ import PgnViewer from "../components/PgnViewer.vue";
 import type { PgnViewerConfig } from "../types";
 
 const pgn = `
-1. e4 e5 2. d4 exd4 3. Nf3 Nc6
+1. c4 Nf6 2. Nc3 g6 3. g3 (3. e4 d6 4. d4) 3... Bg7 4. Bg2 O-O
+5. Nf3 d6 6. O-O Nc6 (6... e5 7. d3 Re8 8. Rb1 c6) 7. Rb1 a5 8. a3
 `;
 
 const config: PgnViewerConfig = {
 	pgn,
-	initialPly: 6,
+	initialPly: 9,
 };
 </script>
 
 <template>
-	<PgnViewer :config="config" />
+	<PgnViewer @ready="console.log" :config />
 </template>
 
 <style>
@@ -28,10 +29,11 @@ cg-board {
 /* floating vue logo */
 .lpv:not(.lpv--menu) cg-board::after {
 	content: "";
-	background: url("./vue.svg") no-repeat center/16%;
+	background: url("./vue.svg") no-repeat center/27%;
 	position: absolute;
 	inset: 0;
 	z-index: 8;
-	filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.8)) opacity(80%);
+	transform: translateY(-1.25%);
+	filter: drop-shadow(0px 0px 27px rgba(0, 0, 0, 0.8)) opacity(80%);
 }
 </style>
