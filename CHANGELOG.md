@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.2.0
+
+### Minor Changes
+
+- Add basic typings for Lichess's PGN viewer API
+
 ## 0.1.4
 
 ### Patch Changes
