@@ -16,6 +16,7 @@ const config: PgnViewerConfig = {
 </script>
 
 <template>
+	<h1>Vue PGN Viewer</h1>
 	<PgnViewer @ready="console.log" :config />
 </template>
 
@@ -35,5 +36,15 @@ cg-board {
 	z-index: 8;
 	transform: translateY(-1.25%);
 	filter: drop-shadow(0px 0px 27px rgba(0, 0, 0, 0.8)) opacity(80%);
+}
+
+.lpv__moves > move {
+	font-size: 1.2rem;
+}
+
+.lpv__moves variation {
+	padding-block: 0.2rem;
+	font-size: 1.1rem;
+	line-height: 1.4;
 }
 </style>
