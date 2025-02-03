@@ -2,7 +2,7 @@
 
 import type { Api as ChessgroundApi } from "chessground/api";
 import type { Config as ChessgroundConfig } from "chessground/config";
-import type { Translate, Pane } from "./lichess-types";
+import type { GoTo, Pane, Translate } from "./lichess-types";
 
 export type PgnViewerApi = {
 	translate: Translate;
@@ -24,6 +24,9 @@ export type PgnViewerApi = {
 
 	analysisUrl(): string;
 	practiceUrl(): string;
+
+	goTo(to: GoTo, focus: boolean): void;
+	canGoTo(to: GoTo): boolean;
 
 	setGround(api: ChessgroundApi): void;
 };
