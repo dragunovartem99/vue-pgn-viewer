@@ -2,13 +2,13 @@
 
 import type { Color, Move, Position } from "chessops";
 import type { FEN } from "chessground/types";
-import type { ChildNode, CommentShape, Node } from "chessops/pgn";
+import type { CommentShape, Node } from "chessops/pgn";
 
 type Id = string;
 type San = string;
 type Uci = string;
+export type Ply = number;
 
-type Pane = "board" | "menu" | "pgn";
 export type Translate = (key: string) => string | undefined;
 export type GoTo = "first" | "prev" | "next" | "last";
 
@@ -59,10 +59,41 @@ interface MoveData extends InitialOrMove {
 	emt?: number;
 }
 
+interface Metadata {
+	externalLink?: string;
+	isLichess: boolean;
+	timeControl?: {
+		initial: number;
+		increment: number;
+	};
+	orientation?: Color;
+	result?: string;
+}
+
+interface Player {
+	name?: string;
+	title?: string;
+	rating?: number;
+	isLichessUser: boolean;
+}
+
+interface Players {
+	white: Player;
+	black: Player;
+}
+
 type AnyNode = Node<MoveData>;
-type MoveNode = ChildNode<MoveData>;
 
 export type Game = {
+	mainline: MoveData[];
+	initial: Initial;
+	moves: AnyNode;
+	players: Players;
+	metadata: Metadata;
+
 	title(): string;
 	hasPlayerName(): boolean;
+	nodeAt(path: Path): AnyNode | undefined;
+	dataAt(path: Path): MoveData | Initial | undefined;
+	pathAtMainlinePly(ply: Ply | "last"): Path;
 };
