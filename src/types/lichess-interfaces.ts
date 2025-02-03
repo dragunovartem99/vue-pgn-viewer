@@ -25,4 +25,7 @@ export type Path = {
 	equals(other: Path): boolean;
 };
 
-export type Game = {};
+export type Game = {
+	title(): string;
+	hasPlayerName(): boolean;
+};

@@ -2,15 +2,15 @@
 
 import type { Api as ChessgroundApi } from "chessground/api";
 import type { Config as ChessgroundConfig } from "chessground/config";
-import type { GoTo, Pane, Path, Translate } from "./lichess-interfaces";
+import type { GoTo, Path, Translate } from "./lichess-interfaces";
 
 export type PgnViewerApi = {
 	path: Path;
 	translate: Translate;
-	ground: ChessgroundApi;
+	ground?: ChessgroundApi;
 	div?: HTMLElement;
 	flipped: boolean;
-	pane: Pane;
+	pane: string; // should be Pane :(
 	autoScrollRequested: boolean;
 
 	focus(): void;
