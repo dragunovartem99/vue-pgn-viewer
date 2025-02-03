@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
@@ -13,6 +14,10 @@ const dtsPluginOptions = {
 
 // https://vite.dev/config/
 export default defineConfig({
+	test: {
+		environment: "jsdom",
+		server: { deps: { inline: ["lichess-pgn-viewer"] } },
+	},
 	build: {
 		// https://vite.dev/guide/build.html#library-mode
 		lib: {
