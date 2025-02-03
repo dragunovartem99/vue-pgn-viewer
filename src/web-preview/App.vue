@@ -2,7 +2,7 @@
 import "../assets/lichess-pgn-viewer.css";
 import "../assets/flexible-coloring.css";
 import PgnViewer from "../components/PgnViewer.vue";
-import type { PgnViewerConfig } from "../types";
+import type { PgnViewerApi, PgnViewerConfig } from "../types";
 
 const pgn = `
 1. c4 Nf6 2. Nc3 g6 3. g3 (3. e4 d6 4. d4) 3... Bg7 4. Bg2 O-O
@@ -13,11 +13,16 @@ const config: PgnViewerConfig = {
 	pgn,
 	initialPly: 9,
 };
+
+const useApi = (api: PgnViewerApi) => {
+	window.api = api;
+	api.focus();
+};
 </script>
 
 <template>
 	<h1>Vue PGN Viewer</h1>
-	<PgnViewer @ready="console.log" :config />
+	<PgnViewer @ready="useApi" :config />
 </template>
 
 <style>

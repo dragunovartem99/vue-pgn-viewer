@@ -1,2 +1,2 @@
-import type { PgnViewerOptions } from "./pgn-viewer-options";
-export type PgnViewerConfig = Partial<PgnViewerOptions>;
+import type { Options } from "./lichess/options";
+export type PgnViewerConfig = Partial<Options>;
