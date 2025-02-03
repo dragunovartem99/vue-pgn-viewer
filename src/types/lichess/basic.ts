@@ -40,20 +40,20 @@ export type Metadata = {
 	result?: string;
 };
 
-export interface InitialOrMove {
+export type InitialOrMove = {
 	fen: FEN;
 	turn: Color;
 	check: boolean;
 	comments: string[];
 	shapes: CommentShape[];
 	clocks: Clocks;
-}
+};
 
-export interface Initial extends InitialOrMove {
+export type Initial = InitialOrMove & {
 	pos: Position;
-}
+};
 
-export interface MoveData extends InitialOrMove {
+export type MoveData = InitialOrMove & {
 	path: Path;
 	ply: number;
 	move: Move;
@@ -62,4 +62,4 @@ export interface MoveData extends InitialOrMove {
 	startingComments: string[];
 	nags: number[];
 	emt?: number;
-}
+};
