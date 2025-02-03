@@ -2,7 +2,7 @@
 
 import type { Api as ChessgroundApi } from "chessground/api";
 import type { Config as ChessgroundConfig } from "chessground/config";
-import type { GoTo, Path, Translate } from "./lichess-interfaces";
+import type { GoTo, Path, Translate } from "./lichess";
 
 export type PgnViewerApi = {
 	path: Path;

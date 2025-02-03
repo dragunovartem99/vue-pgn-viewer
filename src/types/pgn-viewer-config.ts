@@ -1,6 +1,11 @@
 import type { Color } from "chessops";
 import type { Config as ChessgroundConfig } from "chessground/config";
-import type { ShowMoves, ShowPlayers, Ply, Lichess, Translate } from "./lichess-interfaces";
+import type { Translate } from "./lichess";
+
+type ShowMoves = false | "right" | "bottom" | "auto";
+type ShowPlayers = true | false | "auto";
+type Lichess = string | false;
+type Ply = number;
 
 type PgnViewerOptions = {
 	pgn: string;
