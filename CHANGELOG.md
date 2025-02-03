@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.2.1
+
+### Patch Changes
+
+- Update README for npm
+
 ## 0.2.0
 
 ### Minor Changes
