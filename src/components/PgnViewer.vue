@@ -6,15 +6,31 @@ import type { ComponentProps, ComponentEmits, TemplateRef } from "../types";
 const props = defineProps<ComponentProps>();
 const emit = defineEmits<ComponentEmits>();
 
-const board = ref<TemplateRef>(null);
+const div = ref<TemplateRef>(null);
 const viewer = new VuePgnViewer({ ...props.config });
 
-const mountPgnViewer = () => board.value && viewer.mount(board.value);
-const exposeApi = () => viewer.api && emit("ready", viewer.api);
+function mountPgnViewer() {
+	if (!div.value) {
+		throw new Error("Can't access element for mounting PGN viewer");
+	}
 
-onMounted(() => mountPgnViewer() ?? exposeApi());
+	viewer.mount(div.value);
+}
+
+function exposeApi() {
+	if (!viewer.api) {
+		throw new Error("Can't access API of mounted PGN viewer");
+	}
+
+	emit("ready", viewer.api);
+}
+
+onMounted(() => {
+	mountPgnViewer();
+	exposeApi();
+});
 </script>
 
 <template>
-	<div ref="board"></div>
+	<div ref="div"></div>
 </template>
