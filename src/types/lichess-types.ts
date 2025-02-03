@@ -3,11 +3,17 @@
 import type { Color } from "chessops";
 import type { Config as ChessgroundConfig } from "chessground/config";
 
-type Ply = number;
-type Translate = (key: string) => string | undefined;
-type ShowMoves = false | "right" | "bottom" | "auto";
-type ShowPlayers = true | false | "auto";
-type Lichess = string | false;
+export type Ply = number;
+
+export type Translate = (key: string) => string | undefined;
+
+export type Pane = "board" | "menu" | "pgn";
+
+export type GoTo = "first" | "prev" | "next" | "last";
+
+export type ShowMoves = false | "right" | "bottom" | "auto";
+export type ShowPlayers = true | false | "auto";
+export type Lichess = string | false;
 
 export type PgnViewerOptions = {
 	pgn: string;

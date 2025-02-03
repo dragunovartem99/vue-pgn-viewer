@@ -2,12 +2,14 @@
 
 import type { Api as ChessgroundApi } from "chessground/api";
 import type { Config as ChessgroundConfig } from "chessground/config";
+import type { Translate, Pane } from "./lichess-types";
 
 export type PgnViewerApi = {
+	translate: Translate;
 	ground: ChessgroundApi;
 	div?: HTMLElement;
 	flipped: boolean;
-	pane: "board" | "menu" | "pgn";
+	pane: Pane;
 	autoScrollRequested: boolean;
 
 	focus(): void;

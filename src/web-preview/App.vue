@@ -15,6 +15,7 @@ const config: PgnViewerConfig = {
 };
 
 const useApi = (api: PgnViewerApi) => {
+	window.api = api;
 	api.focus();
 };
 </script>
