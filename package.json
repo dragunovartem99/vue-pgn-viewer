@@ -2,8 +2,28 @@
 	"name": "vue-pgn-viewer",
 	"version": "0.2.1",
 	"description": "Vue 3 wrapper around official Lichess PGN viewer",
+	"keywords": [
+		"vue",
+		"pgn-viewer",
+		"chess",
+		"lichess",
+		"component",
+		"widget"
+	],
+	"homepage": "https://github.com/dragunovartem99/vue-pgn-viewer",
+	"bugs": {
+		"url": "https://github.com/dragunovartem99/vue-pgn-viewer/issues",
+		"email": "dragunovartem99@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dragunovartem99/vue-pgn-viewer.git"
+	},
 	"license": "GPL-3.0-or-later",
-	"author": "Artem Dragunov <dragunovartem99@gmail.com>",
+	"author": {
+		"name": "Artem Dragunov",
+		"email": "dragunovartem99@gmail.com"
+	},
 	"type": "module",
 	"exports": {
 		".": {
