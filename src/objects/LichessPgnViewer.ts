@@ -1,8 +1,8 @@
 import createPgnViewer from "lichess-pgn-viewer";
-import type { PgnViewerApi, PgnViewerConfig } from "../types";
+import type { PgnViewerConfig } from "../types";
 
 export class LichessPgnViewer {
-	private viewer: PgnViewerApi;
+	private viewer: any;
 
 	constructor(element: HTMLElement, config: PgnViewerConfig) {
 		this.viewer = createPgnViewer(element, config);
