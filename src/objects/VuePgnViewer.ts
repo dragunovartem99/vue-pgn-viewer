@@ -3,7 +3,7 @@ import type { PgnViewerConfig } from "../types";
 
 export class VuePgnViewer {
 	private config;
-	private viewer?: LichessPgnViewer;
+	private viewer!: LichessPgnViewer;
 
 	constructor(config: PgnViewerConfig) {
 		this.config = config;
@@ -14,6 +14,6 @@ export class VuePgnViewer {
 	}
 
 	get api() {
-		return this.viewer?.api;
+		return this.viewer.api;
 	}
 }
