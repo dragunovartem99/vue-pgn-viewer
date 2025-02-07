@@ -1,19 +1,21 @@
-import { LichessPgnViewer } from "./LichessPgnViewer";
-import type { PgnViewerConfig } from "../types";
+import createPgnViewer from "lichess-pgn-viewer";
 
-export class VuePgnViewer {
+import type { IPgnViewer, PgnViewerApi, PgnViewerConfig } from "../types";
+
+export class VuePgnViewer implements IPgnViewer {
 	private config;
-	private viewer?: LichessPgnViewer;
+	private viewer!: PgnViewerApi;
 
-	constructor(config: PgnViewerConfig) {
-		this.config = config;
+	constructor(config?: PgnViewerConfig) {
+		this.config = { ...config };
 	}
 
 	mount(element: HTMLElement) {
-		this.viewer = new LichessPgnViewer(element, this.config);
+		this.viewer = createPgnViewer(element, this.config);
+		return this.viewer.div!;
 	}
 
 	get api() {
-		return this.viewer?.api;
+		return this.viewer;
 	}
 }
