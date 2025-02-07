@@ -1,7 +1,7 @@
 import { test, expect } from "vitest";
 import { VuePgnViewer } from "./VuePgnViewer";
 
-const fakeElement: HTMLElement = document.createElement("figure");
+const fakeElement = document.createElement("figure");
 
 test("mounts the div contating viewer", () => {
 	const viewer = new VuePgnViewer();

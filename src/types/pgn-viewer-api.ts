@@ -1,4 +1,5 @@
 // https://github.com/lichess-org/pgn-viewer/blob/master/src/pgnViewer.ts
+// this is manual conversion of implementation to abstract type/interface
 
 import type { Api as ChessgroundApi } from "chessground/api";
 import type { Config as ChessgroundConfig } from "chessground/config";
