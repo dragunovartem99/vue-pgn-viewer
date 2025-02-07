@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.3.0
+
+### Minor Changes
+
+- ce6e7ab: Include vitest and naive tests
+
 ## 0.2.1
 
 ### Patch Changes
