@@ -4,14 +4,14 @@ import { VuePgnViewer } from "./VuePgnViewer";
 const fakeElement: HTMLElement = document.createElement("figure");
 
 test("mounts the div contating viewer", () => {
-	const viewer = new VuePgnViewer({});
+	const viewer = new VuePgnViewer();
 	const div = viewer.mount(fakeElement);
 
 	expect(div instanceof HTMLDivElement);
 });
 
 test("creates initial position with no config", () => {
-	const viewer = new VuePgnViewer({});
+	const viewer = new VuePgnViewer();
 	viewer.mount(fakeElement);
 
 	expect(viewer.api.cgState().fen).toEqual(
@@ -20,7 +20,7 @@ test("creates initial position with no config", () => {
 });
 
 test("can change state by using API methods", () => {
-	const viewer = new VuePgnViewer({});
+	const viewer = new VuePgnViewer();
 	viewer.mount(fakeElement);
 
 	viewer.api.flip();

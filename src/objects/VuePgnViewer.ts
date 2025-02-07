@@ -6,8 +6,8 @@ export class VuePgnViewer implements IPgnViewer {
 	private config;
 	private viewer!: PgnViewerApi;
 
-	constructor(config: PgnViewerConfig) {
-		this.config = config;
+	constructor(config?: PgnViewerConfig) {
+		this.config = { ...config };
 	}
 
 	mount(element: HTMLElement) {
