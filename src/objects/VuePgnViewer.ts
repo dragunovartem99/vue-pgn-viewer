@@ -4,7 +4,7 @@ import type { IPgnViewer, PgnViewerApi, PgnViewerConfig } from "../types";
 
 export class VuePgnViewer implements IPgnViewer {
 	private config;
-	private viewer?: PgnViewerApi;
+	private viewer!: PgnViewerApi;
 
 	constructor(config: PgnViewerConfig) {
 		this.config = config;

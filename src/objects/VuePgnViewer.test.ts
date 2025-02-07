@@ -6,13 +6,15 @@ const fakeElement: HTMLElement = document.createElement("figure");
 test("mounts the div contating viewer", () => {
 	const viewer = new VuePgnViewer({});
 	const div = viewer.mount(fakeElement);
+
 	expect(div instanceof HTMLDivElement);
 });
 
 test("creates initial position with no config", () => {
 	const viewer = new VuePgnViewer({});
 	viewer.mount(fakeElement);
-	expect(viewer.api!.cgState().fen).toEqual(
+
+	expect(viewer.api.cgState().fen).toEqual(
 		"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
 	);
 });
@@ -20,8 +22,9 @@ test("creates initial position with no config", () => {
 test("can change state by using API methods", () => {
 	const viewer = new VuePgnViewer({});
 	viewer.mount(fakeElement);
-	viewer.api!.flip();
-	expect(viewer.api!.cgState().orientation).toEqual("black");
+
+	viewer.api.flip();
+	expect(viewer.api.cgState().orientation).toEqual("black");
 });
 
 test("generates correct state based on a config", () => {
@@ -30,10 +33,9 @@ test("generates correct state based on a config", () => {
 		initialPly: "last",
 		orientation: "black",
 	});
-
 	viewer.mount(fakeElement);
 
-	expect(viewer.api!.cgState()).toEqual({
+	expect(viewer.api.cgState()).toEqual({
 		fen: "rnb1k1nr/ppp2ppp/8/8/8/2N3b1/PPPPP3/R1BQKBNR w KQkq - 0 7",
 		orientation: "black",
 		check: true,
