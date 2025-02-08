@@ -10,7 +10,6 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-dist-taster
 *.local
 
 # Editor directories and files
@@ -23,3 +22,6 @@ dist-taster
 *.njsproj
 *.sln
 *.sw?
+
+# Demo preview
+dist-demo

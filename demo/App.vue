@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import "../src/assets/lichess-pgn-viewer.css";
 import "../src/assets/flexible-coloring.css";
-import PgnViewer from "../src/components/PgnViewer.vue";
-import type { PgnViewerApi, PgnViewerConfig } from "../src/types";
+
+import { PgnViewer, type PgnViewerApi, type PgnViewerConfig } from "../src/lib";
 
 const pgn = `
 1. c4 Nf6 2. Nc3 g6 3. g3 (3. e4 d6 4. d4) 3... Bg7 4. Bg2 O-O
