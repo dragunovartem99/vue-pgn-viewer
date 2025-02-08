@@ -40,11 +40,11 @@
 	],
 	"scripts": {
 		"build": "vue-tsc -b && vite build",
+		"build-taster": "vue-tsc -b && vite build --config taster.config.ts",
 		"dev": "vite",
 		"format": "prettier . --write",
-		"preview": "vite preview -c web.config.ts",
-		"test": "vitest",
-		"web": "vue-tsc -b && vite build -c web.config.ts"
+		"preview": "vite preview --config web.config.ts",
+		"test": "vitest"
 	},
 	"prettier": "@dragunovartem99/prettier-config",
 	"dependencies": {
