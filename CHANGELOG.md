@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.3.2
+
+### Patch Changes
+
+- Import css directly from lichess-pgn-viewer
+
 ## 0.3.1
 
 ### Patch Changes
