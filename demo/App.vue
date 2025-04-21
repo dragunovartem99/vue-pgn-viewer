@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import "../lib/assets/lichess-pgn-viewer.css";
-import "../lib/assets/flexible-coloring.css";
-
 import { PgnViewer, type PgnViewerApi, type PgnViewerConfig } from "../lib";
 
 const pgn = `
