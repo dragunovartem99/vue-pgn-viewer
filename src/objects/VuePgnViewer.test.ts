@@ -15,7 +15,7 @@ test("creates initial position with no config", () => {
 	viewer.mount(fakeElement);
 
 	expect(viewer.api.cgState().fen).toEqual(
-		"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+		"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 	);
 });
 
