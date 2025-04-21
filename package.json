@@ -39,13 +39,13 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "vue-tsc -b && vite build",
-		"build-demo": "vue-tsc -b && vite build --config demo.config.ts",
-		"dev": "vite",
+		"build": "vue-tsc -b && vite build -c lib.config.ts",
+		"build-demo": "vue-tsc -b && vite build -c demo.config.ts",
+		"dev": "vite -c lib.config.ts",
 		"flow": "./.flow",
 		"format": "prettier . --write",
-		"preview": "vite preview --config demo.config.ts",
-		"test": "vitest"
+		"preview": "vite preview -c demo.config.ts",
+		"test": "vitest -c lib.config.ts"
 	},
 	"prettier": "@dragunovartem99/prettier-config",
 	"dependencies": {

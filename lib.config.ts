@@ -23,8 +23,8 @@ export default defineConfig({
 	build: {
 		// https://vite.dev/guide/build.html#library-mode
 		lib: {
-			entry: resolve(__dirname, "src/lib.ts"),
-			name: "MyLib",
+			entry: resolve(__dirname, "lib/index.ts"),
+			name: "Vue PGN Viewer",
 			fileName: "vue-pgn-viewer",
 		},
 		rollupOptions: {
