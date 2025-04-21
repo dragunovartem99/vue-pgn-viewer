@@ -42,6 +42,7 @@
 		"build": "vue-tsc -b && vite build",
 		"build-demo": "vue-tsc -b && vite build --config demo.config.ts",
 		"dev": "vite",
+		"flow": "./.flow",
 		"format": "prettier . --write",
 		"preview": "vite preview --config demo.config.ts",
 		"test": "vitest"
