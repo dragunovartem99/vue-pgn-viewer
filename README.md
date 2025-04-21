@@ -1,6 +1,6 @@
 # Vue PGN Viewer
 
-Vue 3 wrapper around official [**Lichess PGN Viewer**](https://github.com/lichess-org/pgn-viewer)
+Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/lichess-org/pgn-viewer)
 
 > PGN viewer widget is designed to be embedded in content pages.  
 > This won't replace a fully featured analysis board.
