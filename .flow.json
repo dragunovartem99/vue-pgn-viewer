@@ -1,0 +1,16 @@
+{
+	"session": "vue-pgn-viewer",
+	"windows": [
+		{
+			"name": "nvim",
+			"command": "nvim ."
+		},
+		{
+			"name": "bash"
+		},
+		{
+			"name": "node",
+			"command": "npm run dev -- --host"
+		}
+	]
+}
