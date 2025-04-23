@@ -1,5 +1,9 @@
 # Vue PGN Viewer
 
+Demo: https://dragunovartem99.github.io/vue-pgn-viewer
+
+---
+
 Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/lichess-org/pgn-viewer)
 
 > PGN viewer widget is designed to be embedded in content pages.  
