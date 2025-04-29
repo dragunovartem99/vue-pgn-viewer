@@ -6,7 +6,7 @@ import type { Path } from "./path";
 
 type AnyNode = Node<MoveData>;
 
-export type Game = {
+export interface Game {
 	mainline: MoveData[];
 	initial: Initial;
 	moves: AnyNode;

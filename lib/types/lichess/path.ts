@@ -2,7 +2,7 @@
 
 import type { Id } from "./basic";
 
-export type Path = {
+export interface Path {
 	path: string;
 	size(): number;
 	head(): Id;

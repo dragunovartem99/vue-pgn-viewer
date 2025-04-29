@@ -7,5 +7,3 @@ export type ComponentProps = {
 export type ComponentEmits = {
 	(e: "ready", api: PgnViewerApi): void;
 };
-
-export type TemplateRef = HTMLElement | null;
