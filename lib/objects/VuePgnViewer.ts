@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error: could not found declaration file (.d.ts)
 import createPgnViewer from "../../node_modules/lichess-pgn-viewer/dist/lichess-pgn-viewer.min.js";
 
 import type { IPgnViewer, PgnViewerApi, PgnViewerConfig } from "../types";
