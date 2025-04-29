@@ -18,4 +18,4 @@ export interface Game {
 	nodeAt(path: Path): AnyNode | undefined;
 	dataAt(path: Path): MoveData | Initial | undefined;
 	pathAtMainlinePly(ply: Ply | "last"): Path;
-};
+}

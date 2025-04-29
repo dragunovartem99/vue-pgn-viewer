@@ -14,4 +14,4 @@ export interface Path {
 	isChildOf(parent: Path): boolean;
 	append(id: Id): Path;
 	equals(other: Path): boolean;
-};
+}

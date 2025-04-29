@@ -3,10 +3,4 @@ import type { PgnViewerConfig } from "./pgn-viewer-config";
 import type { IPgnViewer } from "./i-pgn-viewer";
 import type { ComponentProps, ComponentEmits } from "./component";
 
-export type {
-	PgnViewerApi,
-	PgnViewerConfig,
-	IPgnViewer,
-	ComponentProps,
-	ComponentEmits,
-};
+export type { PgnViewerApi, PgnViewerConfig, IPgnViewer, ComponentProps, ComponentEmits };
