@@ -10,8 +10,11 @@ Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/liche
 ## Features
 
 - Easy integration with Vue 3 projects
+- Uses all Lichess PGN Viewer features
 - Fully typed configuration and API
-- Supports all Lichess PGN Viewer features
+- Props autocompletion support
+
+<img src="https://github.com/user-attachments/assets/060bf5fe-0e35-4bab-966b-b0aae6cd1cd5" width="360" alt="IDE integration screenshot" >
 
 ## Installation
 
@@ -32,9 +35,9 @@ pnpm add vue-pgn-viewer
 import "vue-pgn-viewer/style.css";
 ```
 
-2. Register the component:
+2. [Register](https://vuejs.org/guide/components/registration.html) the component:
 
-[Locally](https://vuejs.org/guide/components/registration.html#local-registration) (in any Single-File Component)
+Locally (in any Single-File Component):
 
 ```vue
 <script setup>
@@ -42,7 +45,7 @@ import { PgnViewer } from "vue-pgn-viewer";
 </script>
 ```
 
-Or [globally](https://vuejs.org/guide/components/registration.html#global-registration) (in your main entry file):
+Or globally (in your main entry file):
 
 ```js
 import { PgnViewer } from "vue-pgn-viewer";
@@ -64,9 +67,57 @@ app.component("PgnViewer", PgnViewer);
 
 ## Config
 
+The library exports the `PgnViewerConfig` type for defining config objects separately.
+
+Example:
+
+```vue
+<script setup lang="ts">
+import { PgnViewer, type PgnViewerConfig } from "vue-pgn-viewer";
+
+const config: PgnViewerConfig = {
+    pgn: "1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. Ng5 d5 5. exd5 b5",
+    drawArrows: false,
+    chessground: {
+        coordinates: false,
+        animation: {
+            enabled: true,
+            duration: 500
+        }
+    }
+};
+</script>
+
+<template>
+    <PgnViewer :config="config" />
+</template>
+```
+
+For all configuration options, see the [documented source code](https://github.com/lichess-org/pgn-viewer/blob/master/src/config.ts) (Lichess).
+
 ## API
 
-## Styling
+When mounted, this component emits `ready` event and exposes API for direct manipulations.
+Library exports `PgnViewerApi` type
+
+```vue
+<script setup lang="ts">
+import { PgnViewer, type PgnViewerApi } from "vue-pgn-viewer";
+
+function useApi(api: PgnViewerApi) {
+    api.flip();
+    api.toggleMenu();
+};
+</script>
+
+<template>
+    <PgnViewer @ready="useApi" />
+</template>
+```
+
+For all API options, see the [source code](https://github.com/dragunovartem99/vue-pgn-viewer/blob/master/lib/types/pgn-viewer-api.ts).
+
+<!-- ## Styling -->
 
 ## Limitations
 
