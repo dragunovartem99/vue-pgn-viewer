@@ -35,6 +35,7 @@ export default defineConfig({
 				globals: { vue: "Vue" },
 			},
 		},
+		copyPublicDir: false,
 	},
 	plugins: [vue(), dts(dtsPluginOptions)],
 });
