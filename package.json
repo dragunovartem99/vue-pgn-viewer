@@ -1,6 +1,6 @@
 {
 	"name": "vue-pgn-viewer",
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"description": "Vue 3 adapter for the official Lichess PGN viewer",
 	"keywords": [
 		"vue",
