@@ -10,7 +10,7 @@ Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/liche
 ## Features
 
 - Easy integration with Vue 3 projects
-- Uses all Lichess PGN Viewer features
+- Supports all Lichess PGN Viewer features
 - Fully typed configuration and API
 - Props autocompletion support
 
@@ -97,8 +97,8 @@ For all configuration options, see the [documented source code](https://github.c
 
 ## API
 
-When mounted, this component emits `ready` event and exposes API for direct manipulations.
-Library exports `PgnViewerApi` type
+The component emits a `ready` event when mounted and exposes an API for direct manipulation.  
+The library exports the `PgnViewerApi` type.
 
 ```vue
 <script setup lang="ts">
