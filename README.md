@@ -12,7 +12,7 @@ Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/liche
 - Easy integration with Vue 3 projects
 - Supports all Lichess PGN Viewer features
 - Fully typed configuration and API
-- Props autocompletion support
+- Props/emits autocompletion support
 
 <img src="https://github.com/user-attachments/assets/060bf5fe-0e35-4bab-966b-b0aae6cd1cd5" width="360" alt="IDE integration screenshot" >
 
@@ -107,7 +107,7 @@ import { PgnViewer, type PgnViewerApi } from "vue-pgn-viewer";
 function useApi(api: PgnViewerApi) {
     api.flip();
     api.toggleMenu();
-};
+}
 </script>
 
 <template>
@@ -124,7 +124,7 @@ For all API options, see the [source code](https://github.com/dragunovartem99/vu
 > PGN viewer widget is designed to be embedded in content pages.  
 > This won't replace a fully featured analysis board.
 
-For more flexible functionallity consider:
+For more flexible functionality, consider:
 
 - [lichess-org/chessground](https://github.com/lichess-org/chessground)
 - [qwerty084/vue3-chessboard](https://github.com/qwerty084/vue3-chessboard), which is a wrapper around "chessground"
