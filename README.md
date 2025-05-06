@@ -3,7 +3,6 @@
 <a href="https://dragunovartem99.github.io/vue-pgn-viewer" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Watch_Live_Demo-red"></a>
 <img alt="NPM Version" src="https://img.shields.io/npm/v/vue-pgn-viewer?color=orange">
 
-
 Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/lichess-org/pgn-viewer)
 
 <img src="https://github.com/user-attachments/assets/0c057310-1400-40eb-82b1-ed740a641b90" width="480" alt="Vue PGN Viewer screenshot" >
@@ -11,8 +10,8 @@ Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/liche
 ## Features
 
 - Easy integration with Vue 3 projects
-- Fully typed
-- Supports all original Lichess PGN Viewer configurations
+- Fully typed configuration and API
+- Supports all Lichess PGN Viewer features
 
 ## Installation
 
@@ -35,7 +34,7 @@ import "vue-pgn-viewer/style.css";
 
 2. Register the component:
 
-Locally (in other Single-File Component)
+[Locally](https://vuejs.org/guide/components/registration.html#local-registration) (in any Single-File Component)
 
 ```vue
 <script setup>
@@ -43,14 +42,23 @@ import { PgnViewer } from "vue-pgn-viewer";
 </script>
 ```
 
-3. Use the component
+Or [globally](https://vuejs.org/guide/components/registration.html#global-registration) (in your main entry file):
+
+```js
+import { PgnViewer } from "vue-pgn-viewer";
+app.component("PgnViewer", PgnViewer);
+```
+
+3. Use the component in your template:
 
 ```vue
 <template>
-    <PgnViewer :config="{
-        pgn: '1. f3 e5 2. g4 Qh4#',
-        orientation: 'black'
-    }"/>
+    <PgnViewer
+        :config="{
+            pgn: '1. f3 e5 2. g4 Qh4#',
+            orientation: 'black',
+        }"
+    />
 </template>
 ```
 
