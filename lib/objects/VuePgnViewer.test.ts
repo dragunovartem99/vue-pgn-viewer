@@ -4,8 +4,11 @@ import type { PgnViewerConfig } from "../types";
 
 const STARTING_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
-function create(element: string): HTMLElement {
-	return document.createElement(element);
+type Tags = HTMLElementTagNameMap;
+type Tag = keyof Tags;
+
+function create<K extends Tag>(tagName: K): Tags[K] {
+	return document.createElement(tagName);
 }
 
 test("replaces node when mounted", () => {
@@ -31,21 +34,21 @@ test("creates div element when mounted", () => {
 test("without arguments, sets up initial position", () => {
 	const viewer = new VuePgnViewer();
 
-	viewer.mount(create("div"));
+	viewer.mount(create("summary"));
 	expect(viewer.api.cgState().fen).toEqual(STARTING_FEN);
 });
 
 test("with empty config, sets up initial position", () => {
 	const viewer = new VuePgnViewer({});
 
-	viewer.mount(create("div"));
+	viewer.mount(create("object"));
 	expect(viewer.api.cgState().fen).toEqual(STARTING_FEN);
 });
 
 test("changes state in reaction to API calls", () => {
 	const viewer = new VuePgnViewer();
 
-	viewer.mount(create("div"));
+	viewer.mount(create("figcaption"));
 	viewer.api.flip();
 
 	expect(viewer.api.cgState().orientation).toEqual("black");
@@ -59,7 +62,7 @@ test("generates correct state based on a config", () => {
 	};
 
 	const viewer = new VuePgnViewer(config);
-	viewer.mount(create("div"));
+	viewer.mount(create("ruby"));
 
 	expect(viewer.api.cgState()).toEqual({
 		fen: "rnb1k1nr/ppp2ppp/3b4/8/7q/8/PPPPPKPP/RNBQ1BNR w kq - 2 5",
