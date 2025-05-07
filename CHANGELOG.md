@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.3.3
+
+### Patch Changes
+
+- 15543ce: Add basic "onboarding" to README
+
 ## 0.3.2
 
 ### Patch Changes
