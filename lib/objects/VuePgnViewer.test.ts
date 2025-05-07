@@ -1,45 +1,74 @@
 import { test, expect } from "vitest";
 import { VuePgnViewer } from "./VuePgnViewer";
+import type { PgnViewerConfig } from "../types";
 
-const fakeElement = document.createElement("figure");
+const STARTING_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
-test("mounts the div contating viewer", () => {
-	const viewer = new VuePgnViewer();
-	const div = viewer.mount(fakeElement);
+type Tags = HTMLElementTagNameMap;
+type Tag = keyof Tags;
 
-	expect(div instanceof HTMLDivElement);
+function create<K extends Tag>(tagName: K): Tags[K] {
+	return document.createElement(tagName);
+}
+
+test("replaces node when mounted", () => {
+	const parent = create("section");
+	const mountNode = create("div");
+
+	parent.appendChild(mountNode);
+
+	expect(mountNode).toBe(parent.firstChild);
+
+	new VuePgnViewer().mount(mountNode);
+
+	expect(mountNode).not.toBe(parent.firstChild);
 });
 
-test("creates initial position with no config", () => {
-	const viewer = new VuePgnViewer();
-	viewer.mount(fakeElement);
+test("creates div element when mounted", () => {
+	const mounted = new VuePgnViewer().mount(create("span"));
 
-	expect(viewer.api.cgState().fen).toEqual(
-		"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
-	);
+	expect(mounted instanceof HTMLSpanElement).toBe(false);
+	expect(mounted instanceof HTMLDivElement).toBe(true);
 });
 
-test("can change state by using API methods", () => {
+test("without arguments, sets up initial position", () => {
 	const viewer = new VuePgnViewer();
-	viewer.mount(fakeElement);
 
+	viewer.mount(create("summary"));
+	expect(viewer.api.cgState().fen).toEqual(STARTING_FEN);
+});
+
+test("with empty config, sets up initial position", () => {
+	const viewer = new VuePgnViewer({});
+
+	viewer.mount(create("object"));
+	expect(viewer.api.cgState().fen).toEqual(STARTING_FEN);
+});
+
+test("changes state in reaction to API calls", () => {
+	const viewer = new VuePgnViewer();
+
+	viewer.mount(create("figcaption"));
 	viewer.api.flip();
+
 	expect(viewer.api.cgState().orientation).toEqual("black");
 });
 
 test("generates correct state based on a config", () => {
-	const viewer = new VuePgnViewer({
-		pgn: "1. f4 e5 2. fxe5 d6 3. exd6 Bxd6 4. Nc3 Qh4+ 5. g3 Qxg3+ 6. hxg3 Bxg3#",
+	const config: PgnViewerConfig = {
+		pgn: "1. f4 e5 2. fxe5 d6 3. exd6 Bxd6 4. Kf2 Qh4+",
 		initialPly: "last",
 		orientation: "black",
-	});
-	viewer.mount(fakeElement);
+	};
+
+	const viewer = new VuePgnViewer(config);
+	viewer.mount(create("ruby"));
 
 	expect(viewer.api.cgState()).toEqual({
-		fen: "rnb1k1nr/ppp2ppp/8/8/8/2N3b1/PPPPP3/R1BQKBNR w KQkq - 0 7",
+		fen: "rnb1k1nr/ppp2ppp/3b4/8/7q/8/PPPPPKPP/RNBQ1BNR w kq - 2 5",
 		orientation: "black",
 		check: true,
-		lastMove: ["d6", "g3"],
+		lastMove: ["d8", "h4"],
 		turnColor: "white",
 	});
 });
