@@ -1,5 +1,5 @@
 // https://github.com/lichess-org/pgn-viewer/blob/master/src/pgnViewer.ts
-// this is manual conversion of implementation to abstract type/interface
+// manual conversion from concrete class (implementation) to an interface
 
 import type { Api as ChessgroundApi } from "chessground/api";
 import type { Config as ChessgroundConfig } from "chessground/config";
@@ -7,14 +7,14 @@ import type { GoTo, Translate } from "./lichess/basic";
 import type { Game } from "./lichess/game";
 import type { Path } from "./lichess/path";
 
-export type PgnViewerApi = {
+export interface PgnViewerApi {
 	game: Game;
 	path: Path;
 	translate: Translate;
 	ground?: ChessgroundApi;
 	div?: HTMLElement;
 	flipped: boolean;
-	pane: string; // should be Pane :(
+	pane: string; // should be a Pane :(
 	autoScrollRequested: boolean;
 
 	focus(): void;
@@ -34,4 +34,4 @@ export type PgnViewerApi = {
 	canGoTo(to: GoTo): boolean;
 
 	setGround(api: ChessgroundApi): void;
-};
+}
