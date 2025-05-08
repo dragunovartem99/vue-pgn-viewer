@@ -1,9 +1,10 @@
 // https://github.com/lichess-org/pgn-viewer/blob/master/src/path.ts
+// manual conversion from concrete class (implementation) to an interface
 
 import type { Id } from "./basic";
 
 export interface Path {
-	path: string;
+	readonly path: string;
 	size(): number;
 	head(): Id;
 	tail(): Path;
