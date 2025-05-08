@@ -9,14 +9,15 @@ type AnyNode = Node<MoveData>;
 
 export interface Game {
 	mainline: MoveData[];
-	initial: Initial;
-	moves: AnyNode;
-	players: Players;
-	metadata: Metadata;
 
-	title(): string;
-	hasPlayerName(): boolean;
+	readonly initial: Initial;
+	readonly moves: AnyNode;
+	readonly players: Players;
+	readonly metadata: Metadata;
+
 	nodeAt(path: Path): AnyNode | undefined;
 	dataAt(path: Path): MoveData | Initial | undefined;
+	title(): string;
 	pathAtMainlinePly(ply: Ply | "last"): Path;
+	hasPlayerName(): boolean;
 }
