@@ -18,7 +18,7 @@ export type Options = {
 	keyboardToMove: boolean;
 	drawArrows: boolean;
 	menu: {
-		getPgn?: {
+		getPgn: {
 			enabled?: boolean;
 			fileName?: string;
 		};

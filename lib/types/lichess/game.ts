@@ -1,4 +1,5 @@
 // https://github.com/lichess-org/pgn-viewer/blob/master/src/game.ts
+// manual conversion from concrete class (implementation) to an interface
 
 import type { Node } from "chessops/pgn";
 import type { Ply, MoveData, Initial, Players, Metadata } from "./basic";
