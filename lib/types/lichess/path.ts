@@ -5,12 +5,13 @@ import type { Id } from "./basic";
 
 export interface Path {
 	readonly path: string;
+
 	size(): number;
 	head(): Id;
 	tail(): Path;
 	init(): Path;
 	last(): Id;
-	empty(): void;
+	empty(): boolean;
 	contains(other: Path): boolean;
 	isChildOf(parent: Path): boolean;
 	append(id: Id): Path;
