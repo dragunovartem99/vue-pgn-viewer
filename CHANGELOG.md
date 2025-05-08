@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.3.4
+
+### Patch Changes
+
+- Improve types structure
+
 ## 0.3.3
 
 ### Patch Changes
