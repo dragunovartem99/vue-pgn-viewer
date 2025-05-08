@@ -2,7 +2,7 @@
 // manual conversion from concrete class (implementation) to an interface
 
 import type { Node } from "chessops/pgn";
-import type { Ply, MoveData, Initial, Players, Metadata } from "./basic";
+import type { Initial, Metadata, MoveData, Players, Ply } from "./basic";
 import type { Path } from "./path";
 
 type AnyNode = Node<MoveData>;

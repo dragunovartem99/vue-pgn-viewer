@@ -2,7 +2,7 @@
 
 import type { Color } from "chessops";
 import type { Config as ChessgroundConfig } from "chessground/config";
-import type { Ply, Translate, ShowMoves, ShowPlayers, Lichess } from "./basic";
+import type { Lichess, Ply, ShowMoves, ShowPlayers, Translate } from "./basic";
 
 export type Options = {
 	pgn: string;
