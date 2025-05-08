@@ -1,13 +1,4 @@
-import type { PgnViewerApi } from "./pgn-viewer-api";
-import type { PgnViewerConfig } from "./pgn-viewer-config";
-import type { IPgnViewer } from "./i-pgn-viewer";
-import type { ComponentProps, ComponentEmits, TemplateRef } from "./component";
-
-export type {
-	PgnViewerApi,
-	PgnViewerConfig,
-	IPgnViewer,
-	ComponentProps,
-	ComponentEmits,
-	TemplateRef,
-};
+export * from "./pgn-viewer-api";
+export * from "./pgn-viewer-config";
+export * from "./pgn-viewer";
+export * from "./component";
