@@ -5,9 +5,8 @@ import type { PgnViewerConfig } from "../types";
 const STARTING_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
 type Tags = HTMLElementTagNameMap;
-type Tag = keyof Tags;
 
-function create<K extends Tag>(tagName: K): Tags[K] {
+function create<T extends keyof Tags>(tagName: T): Tags[T] {
 	return document.createElement(tagName);
 }
 
@@ -64,11 +63,16 @@ test("generates correct state based on a config", () => {
 	const viewer = new VuePgnViewer(config);
 	viewer.mount(create("ruby"));
 
-	expect(viewer.api.cgState()).toEqual({
-		fen: "rnb1k1nr/ppp2ppp/3b4/8/7q/8/PPPPPKPP/RNBQ1BNR w kq - 2 5",
-		orientation: "black",
-		check: true,
-		lastMove: ["d8", "h4"],
-		turnColor: "white",
-	});
+	expect(viewer.api.cgState()).toMatchInlineSnapshot(`
+		{
+		  "check": true,
+		  "fen": "rnb1k1nr/ppp2ppp/3b4/8/7q/8/PPPPPKPP/RNBQ1BNR w kq - 2 5",
+		  "lastMove": [
+		    "d8",
+		    "h4",
+		  ],
+		  "orientation": "black",
+		  "turnColor": "white",
+		}
+	`);
 });
