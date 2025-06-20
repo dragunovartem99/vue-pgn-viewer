@@ -5,9 +5,8 @@ import type { PgnViewerConfig } from "../types";
 const STARTING_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
 type Tags = HTMLElementTagNameMap;
-type Tag = keyof HTMLElementTagNameMap;
 
-function create<K extends Tag>(tagName: K): Tags[K] {
+function create<T extends keyof Tags>(tagName: T): Tags[T] {
 	return document.createElement(tagName);
 }
 
