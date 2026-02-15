@@ -40,7 +40,7 @@
 	],
 	"scripts": {
 		"build": "vue-tsc -b && vite build -c lib.config.ts",
-		"build-demo": "vue-tsc -b && vite build -c demo.config.ts",
+		"build:demo": "vue-tsc -b && vite build -c demo.config.ts",
 		"dev": "vite -c lib.config.ts",
 		"flow": "flow",
 		"format": "prettier . --write",
@@ -49,7 +49,8 @@
 		"lint:check": "eslint",
 		"prepare": "husky",
 		"preview": "vite preview -c demo.config.ts",
-		"test": "vitest -c lib.config.ts"
+		"test": "vitest -c lib.config.ts",
+		"types:check": "vue-tsc -b --noEmit"
 	},
 	"prettier": "@dragunovartem99/prettier-config",
 	"dependencies": {
