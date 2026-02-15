@@ -50,7 +50,7 @@
 		"prepare": "husky",
 		"preview": "vite preview -c demo.config.ts",
 		"test": "vitest -c lib.config.ts",
-		"tsc:check": "vue-tsc --noEmit --skipLibCheck"
+		"types:check": "vue-tsc -b --noEmit"
 	},
 	"prettier": "@dragunovartem99/prettier-config",
 	"dependencies": {
