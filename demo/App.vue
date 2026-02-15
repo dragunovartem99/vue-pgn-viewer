@@ -18,7 +18,10 @@ const useApi = (api: PgnViewerApi) => {
 
 <template>
 	<h1>Vue PGN Viewer</h1>
-	<PgnViewer @ready="useApi" :config />
+	<PgnViewer
+		:config
+		@ready="useApi"
+	/>
 </template>
 
 <style>
