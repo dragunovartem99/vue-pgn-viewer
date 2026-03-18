@@ -1,9 +1,0 @@
-name: CI Check (Frontend)
-
-on:
-    pull_request:
-        branches: ["main"]
-
-jobs:
-    pipes:
-        uses: dragunovartem99/pipes/.github/workflows/ci-check-frontend.yaml@main

@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+    push:
+        branches: ["main"]
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+jobs:
+    pipes:
+        uses: dragunovartem99/pipes/.github/workflows/deploy.yaml@main
+        with:
+            build-command: build:demo
+            dist-folder: ./dist-demo
