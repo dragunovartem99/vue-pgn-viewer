@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.3.5
+
+### Patch Changes
+
+- 971c747: Move `vue` to peerDependencies
+
 ## 0.3.4
 
 ### Patch Changes
