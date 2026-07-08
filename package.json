@@ -59,7 +59,7 @@
 		"@changesets/cli": "^2.29.3",
 		"@dragunovartem99/eslint-config": "^1.0.0",
 		"@dragunovartem99/flow": "^0.1.1",
-		"@dragunovartem99/oxfmt-config": "^1.3.0",
+		"@dragunovartem99/oxfmt-config": "^2.0.0",
 		"@types/node": "^24.10.1",
 		"@vitejs/plugin-vue": "^6.0.2",
 		"@vue/tsconfig": "^0.9.0",
