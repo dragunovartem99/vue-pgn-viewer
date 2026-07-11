@@ -1,6 +1,7 @@
 import { test, expect } from "vitest";
-import { VuePgnViewer } from "./VuePgnViewer";
+
 import type { PgnViewerConfig } from "../types";
+import { VuePgnViewer } from "./VuePgnViewer";
 
 const STARTING_FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 

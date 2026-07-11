@@ -1,7 +1,8 @@
 // https://github.com/lichess-org/pgn-viewer/blob/master/src/interfaces.ts
 
-import type { Color } from "chessops";
 import type { Config as ChessgroundConfig } from "chessground/config";
+import type { Color } from "chessops";
+
 import type { Lichess, Ply, ShowMoves, ShowPlayers, Translate } from "./basic";
 
 export type Options = {

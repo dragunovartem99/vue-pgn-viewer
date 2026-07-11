@@ -1,8 +1,9 @@
 // https://github.com/lichess-org/pgn-viewer/blob/master/src/interfaces.ts
 
-import type { Color, Move, Position } from "chessops";
 import type { FEN } from "chessground/types";
+import type { Color, Move, Position } from "chessops";
 import type { CommentShape } from "chessops/pgn";
+
 import type { Path } from "./path";
 
 export type Id = string;
