@@ -13,7 +13,10 @@ const viewer = new VuePgnViewer(props.config);
 const mountPgnViewer = () => viewer.mount(div.value!);
 const exposeApi = () => emit("ready", viewer.api);
 
-onMounted(() => mountPgnViewer() || exposeApi());
+onMounted(() => {
+	mountPgnViewer();
+	exposeApi();
+});
 </script>
 
 <template>

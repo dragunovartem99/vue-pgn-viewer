@@ -3,6 +3,7 @@
 
 import type { Api as ChessgroundApi } from "chessground/api";
 import type { Config as ChessgroundConfig } from "chessground/config";
+
 import type { GoTo, Translate } from "./lichess/basic";
 import type { Game } from "./lichess/game";
 import type { Path } from "./lichess/path";
