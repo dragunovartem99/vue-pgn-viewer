@@ -1,2 +1,3 @@
-import type { Options } from "./lichess/options";
-export type PgnViewerConfig = Partial<Options>;
+import type { Opts } from "@lichess-org/pgn-viewer/interfaces";
+
+export type PgnViewerConfig = Partial<Opts>;

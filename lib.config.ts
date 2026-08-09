@@ -19,7 +19,7 @@ const dtsPluginOptions = {
 export default defineConfig({
 	test: {
 		environment: "jsdom",
-		server: { deps: { inline: ["lichess-pgn-viewer"] } },
+		server: { deps: { inline: ["@lichess-org/pgn-viewer"] } },
 	},
 	build: {
 		// https://vite.dev/guide/build.html#library-mode

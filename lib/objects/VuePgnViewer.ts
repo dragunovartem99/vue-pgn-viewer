@@ -1,4 +1,4 @@
-import createPgnViewer from "lichess-pgn-viewer";
+import createPgnViewer from "@lichess-org/pgn-viewer";
 
 import type { IPgnViewer, PgnViewerApi, PgnViewerConfig } from "../types";
 
