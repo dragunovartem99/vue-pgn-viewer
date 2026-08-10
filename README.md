@@ -1,6 +1,7 @@
 # Vue PGN Viewer
 
 <a href="https://dragunovartem99.github.io/vue-pgn-viewer" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Watch_Live_Demo-red"></a>
+<img alt="NPM Downloads" src="https://img.shields.io/npm/d18m/vue-pgn-viewer?color=blue">
 <img alt="NPM Version" src="https://img.shields.io/npm/v/vue-pgn-viewer?color=orange">
 
 Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/lichess-org/pgn-viewer)
