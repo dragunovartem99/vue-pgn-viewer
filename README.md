@@ -16,7 +16,7 @@ Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/liche
 - Fully typed configuration and API
 - Props/emits autocompletion support
 
-<img src="https://github.com/user-attachments/assets/060bf5fe-0e35-4bab-966b-b0aae6cd1cd5" width="360" alt="IDE integration screenshot" >
+<img src="https://github.com/user-attachments/assets/8c38b825-7bec-4aa2-a7f2-75ccaaee2b14" width="480" alt="IDE integration screenshot" >
 
 ## Installation
 
