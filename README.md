@@ -6,7 +6,8 @@
 
 Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/lichess-org/pgn-viewer)
 
-<img src="https://github.com/user-attachments/assets/0c057310-1400-40eb-82b1-ed740a641b90" width="480" alt="Vue PGN Viewer screenshot" >
+<img src="https://github.com/user-attachments/assets/700cba55-c006-481a-bb47-bae4f1e12378" width="480" alt="Vue PGN Viewer screenshot" >
+
 
 ## Features
 
