@@ -1,5 +1,17 @@
 # vue-pgn-viewer
 
+## 0.4.3
+
+### Patch Changes
+
+- Add types condition to exports
+
+## 0.4.2
+
+### Patch Changes
+
+- Fix types declaration path
+
 ## 0.4.1
 
 ### Patch Changes
