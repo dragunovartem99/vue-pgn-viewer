@@ -119,7 +119,16 @@ function useApi(api: PgnViewerApi) {
 
 For all API options, see the [source code](https://github.com/dragunovartem99/vue-pgn-viewer/blob/master/lib/types/pgn-viewer-api.ts).
 
-<!-- ## Styling -->
+## Styling
+
+Customize board colors with CSS variables:
+
+```css
+.wood-theme.lpv {
+  --board-color-light: #f0d9b5;
+  --board-color-dark: #b58863;
+}
+```
 
 ## Limitations
 
