@@ -3,8 +3,8 @@ cg-board::before {
 	position: absolute;
 	inset: 0;
 	background: repeating-conic-gradient(
-			var(--board-color-light, transparent) 0% 25%,
-			var(--board-color-dark, transparent) 0% 50%
+			var(--board-color-dark, transparent) 0% 25%,
+			var(--board-color-light, transparent) 0% 50%
 		)
 		50% / 25% 25%;
 }

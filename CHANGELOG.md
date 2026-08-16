@@ -1,5 +1,11 @@
 # vue-pgn-viewer
 
+## 0.4.1
+
+### Patch Changes
+
+- Fix chessboard color orientation in conic gradient
+
 ## 0.4.0
 
 ### Minor Changes
