@@ -30,7 +30,7 @@
 	--accent-contrast: #10241a;
 	--accent-soft: rgba(78, 192, 138, 0.18);
 	--variation-bg: rgba(255, 255, 255, 0.05);
-	--grid-line: rgba(255, 255, 255, 0.07);
+	--dot: rgba(255, 255, 255, 0.14);
 
 	/* A thin white veil over the last move's squares, which lifts both square colors without
 	   introducing a third hue. Kept light — any more and the square bleaches out to pale mint. */
@@ -66,23 +66,21 @@ body {
 	background-color: var(--bg);
 }
 
-/* Squares behind the page — the board's own pattern, quiet enough to read as paper. It lives on a
-   fixed layer of its own rather than on the body, so the fade at the bottom masks the grid and not
-   the text sitting on top of it. */
+/* A dot grid behind the page, quiet enough to read as paper. It lives on a fixed layer of its own
+   rather than on the body, so the fade at the bottom masks the dots and not the text sitting on top
+   of them. */
 body::before {
 	content: "";
 	position: fixed;
 	inset: 0;
 	pointer-events: none;
-	background-image:
-		linear-gradient(var(--grid-line) 1px, transparent 1px),
-		linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-	background-size: 4rem 4rem;
-	background-position: center -1px;
+	background-image: radial-gradient(var(--dot) 1px, transparent 1.5px);
+	background-size: 2.5rem 2.5rem;
+	background-position: center top;
 	mask-image: linear-gradient(to bottom, #000 45%, transparent 92%);
 }
 
-/* Above the grid layer, which is painted over the body's own background rather than under it — a
+/* Above the dot layer, which is painted over the body's own background rather than under it — a
    background-color on the body propagates to the canvas, where it would cover a negative z-index. */
 #app {
 	position: relative;
