@@ -15,7 +15,7 @@ test("replaces node when mounted", () => {
 	const parent = create("section");
 	const mountNode = create("div");
 
-	parent.appendChild(mountNode);
+	parent.append(mountNode);
 
 	expect(mountNode).toBe(parent.firstChild);
 
