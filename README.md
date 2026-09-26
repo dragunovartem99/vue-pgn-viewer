@@ -130,6 +130,17 @@ Customize board colors with CSS variables:
 }
 ```
 
+## Development
+
+```sh
+npm ci
+npm run dev
+```
+
+Pull requests run `format:check`, `types:check`, `lint:check` and `test`, and so does the pre-commit
+hook. Merging to `main` deploys the demo to GitHub Pages and, with a pending changeset
+(`npx changeset`), opens a release PR that publishes to npm once merged
+
 ## Limitations
 
 > PGN viewer widget is designed to be embedded in content pages.  

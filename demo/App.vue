@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-import { PgnViewer, type PgnViewerApi, type PgnViewerConfig } from "../lib";
+import { PgnViewer } from "../lib";
+import type { PgnViewerApi, PgnViewerConfig } from "../lib";
 
 // The Opera Game, Paris 1858 — a real game rather than a made-up one, short enough to play through
 // in the demo and famous enough that the moves are worth looking at.

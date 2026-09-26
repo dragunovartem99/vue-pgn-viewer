@@ -3,6 +3,7 @@ name: Deploy
 on:
     push:
         branches: ["main"]
+    workflow_dispatch:
 
 permissions:
     contents: read
@@ -10,8 +11,12 @@ permissions:
     id-token: write
 
 jobs:
+    ci:
+        uses: ./.github/workflows/ci.yaml
+
     pipes:
-        uses: dragunovartem99/pipes/.github/workflows/deploy.yaml@main
+        needs: ci
+        uses: dragunovartem99/pipes/.github/workflows/deploy-github.yaml@v1.0.1
         with:
             build-command: build:demo
             dist-folder: ./dist-demo
