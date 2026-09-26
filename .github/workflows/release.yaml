@@ -15,4 +15,4 @@ jobs:
 
     pipes:
         needs: ci
-        uses: dragunovartem99/pipes/.github/workflows/release-npm.yaml@v1.0.1
+        uses: dragunovartem99/pipes/.github/workflows/release-npm.yaml@v1.2.0
