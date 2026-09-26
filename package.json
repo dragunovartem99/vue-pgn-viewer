@@ -51,7 +51,8 @@
 		"prepare": "husky",
 		"preview": "vite preview -c demo.config.ts",
 		"test": "vitest -c lib.config.ts",
-		"types:check": "vue-tsc -b --noEmit"
+		"types:check": "vue-tsc -b --noEmit",
+		"prepublishOnly": "npm run build"
 	},
 	"dependencies": {
 		"@lichess-org/pgn-viewer": "^2.6.2"
