@@ -11,11 +11,7 @@ permissions:
     id-token: write
 
 jobs:
-    ci:
-        uses: ./.github/workflows/ci.yaml
-
     pipes:
-        needs: ci
         uses: dragunovartem99/pipes/.github/workflows/deploy-github.yaml@v1.2.0
         with:
             build-command: build:demo
