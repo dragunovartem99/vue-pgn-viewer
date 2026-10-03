@@ -8,7 +8,6 @@ Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/liche
 
 <img src="https://github.com/user-attachments/assets/5161c6b4-31cd-4414-8f6f-d5742346276f" width="480" alt="Vue PGN Viewer screenshot" >
 
-
 ## Features
 
 - Easy integration with Vue 3 projects
@@ -84,9 +83,9 @@ const config: PgnViewerConfig = {
         coordinates: false,
         animation: {
             enabled: true,
-            duration: 500
-        }
-    }
+            duration: 500,
+        },
+    },
 };
 </script>
 
@@ -125,8 +124,8 @@ Customize board colors with CSS variables:
 
 ```css
 .wood-theme.lpv {
-  --board-color-light: #f0d9b5;
-  --board-color-dark: #b58863;
+    --board-color-light: #f0d9b5;
+    --board-color-dark: #b58863;
 }
 ```
 
