@@ -12,7 +12,8 @@ permissions:
 
 jobs:
     pipes:
-        uses: dragunovartem99/pipes/.github/workflows/deploy-github.yaml@v2.0.0
+        uses: dragunovartem99/pipes/.github/workflows/deploy-github.yaml@v3.0.0
         with:
-            build-command: build:demo
+            setup: node
+            build: npm run build:demo
             dist-folder: ./dist-demo
