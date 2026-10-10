@@ -11,4 +11,4 @@ permissions:
 
 jobs:
     pipes:
-        uses: dragunovartem99/pipes/.github/workflows/release-npm.yaml@v3.0.0
+        uses: dragunovartem99/pipes/.github/workflows/release-npm.yaml@v3.1.0
