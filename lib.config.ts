@@ -26,11 +26,11 @@ export default defineConfig({
 			fileName: "vue-pgn-viewer",
 		},
 		rollupOptions: {
-			external: ["vue"],
+			external: ["vue", "@lichess-org/pgn-viewer"],
 			output: {
 				// Provide global variables to use in the UMD build
 				// for externalized deps
-				globals: { vue: "Vue" },
+				globals: { "vue": "Vue", "@lichess-org/pgn-viewer": "LichessPgnViewer" },
 			},
 		},
 		copyPublicDir: false,

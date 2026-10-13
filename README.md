@@ -20,11 +20,11 @@ Vue 3 adapter for the official [**Lichess PGN Viewer**](https://github.com/liche
 ## Installation
 
 ```shell
-npm install vue-pgn-viewer
+npm install vue-pgn-viewer @lichess-org/pgn-viewer
 # or
-yarn add vue-pgn-viewer
+yarn add vue-pgn-viewer @lichess-org/pgn-viewer
 # or
-pnpm add vue-pgn-viewer
+pnpm add vue-pgn-viewer @lichess-org/pgn-viewer
 ```
 
 ## Quick Start
