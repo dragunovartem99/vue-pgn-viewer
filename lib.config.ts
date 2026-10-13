@@ -22,16 +22,11 @@ export default defineConfig({
 		// https://vite.dev/guide/build.html#library-mode
 		lib: {
 			entry: resolve(import.meta.dirname, "lib/index.ts"),
-			name: "Vue PGN Viewer",
 			fileName: "vue-pgn-viewer",
+			formats: ["es"],
 		},
 		rollupOptions: {
 			external: ["vue", "@lichess-org/pgn-viewer"],
-			output: {
-				// Provide global variables to use in the UMD build
-				// for externalized deps
-				globals: { "vue": "Vue", "@lichess-org/pgn-viewer": "LichessPgnViewer" },
-			},
 		},
 		copyPublicDir: false,
 	},
