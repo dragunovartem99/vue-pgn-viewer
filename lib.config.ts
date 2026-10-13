@@ -9,7 +9,9 @@ import dts from "vite-plugin-dts";
 
 const dtsPluginOptions = {
 	tsconfigPath: "./tsconfig.app.json",
-	rollupTypes: true,
+	include: ["lib"],
+	exclude: ["**/*.test.ts"],
+	bundleTypes: true,
 };
 
 // https://vite.dev/config/
