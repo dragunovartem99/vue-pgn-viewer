@@ -28,14 +28,12 @@
 		"dist"
 	],
 	"type": "module",
-	"main": "./dist/vue-pgn-viewer.umd.cjs",
-	"module": "./dist/vue-pgn-viewer.js",
-	"types": "./dist/lib/index.d.ts",
+	"main": "./dist/vue-pgn-viewer.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-			"types": "./dist/lib/index.d.ts",
-			"import": "./dist/vue-pgn-viewer.js",
-			"require": "./dist/vue-pgn-viewer.umd.cjs"
+			"types": "./dist/index.d.ts",
+			"default": "./dist/vue-pgn-viewer.js"
 		},
 		"./style.css": "./dist/vue-pgn-viewer.css"
 	},
@@ -54,15 +52,13 @@
 		"test": "vitest -c lib.config.ts",
 		"types:check": "vue-tsc -b --noEmit"
 	},
-	"dependencies": {
-		"@lichess-org/pgn-viewer": "^2.6.2"
-	},
 	"devDependencies": {
 		"@changesets/cli": "^2.29.3",
 		"@dragunovartem99/flow": "^0.1.1",
 		"@dragunovartem99/oxfmt-config": "^2.1.0",
 		"@dragunovartem99/oxlint-config": "^3.0.1",
 		"@fontsource-variable/inter": "^5.3.0",
+		"@microsoft/api-extractor": "^7.59.4",
 		"@types/node": "^24.10.1",
 		"@vitejs/plugin-vue": "^6.0.2",
 		"@vue/tsconfig": "^0.9.0",
@@ -75,6 +71,7 @@
 		"vue-tsc": "^3.1.5"
 	},
 	"peerDependencies": {
+		"@lichess-org/pgn-viewer": "^2.6.2",
 		"vue": "^3.5.13"
 	}
 }
