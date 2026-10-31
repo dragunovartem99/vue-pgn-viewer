@@ -149,3 +149,18 @@ For more flexible functionality, consider:
 
 - [lichess-org/chessground](https://github.com/lichess-org/chessground)
 - [qwerty084/vue3-chessboard](https://github.com/qwerty084/vue3-chessboard), which is a wrapper around "chessground"
+
+## Preview screenshots
+
+Generate a PNG of the viewer stage with 24px padding and the demo background at 2× resolution:
+
+```sh
+npm ci
+npx playwright install chromium
+npm run screenshots
+```
+
+The command builds the demo, starts a temporary local preview server, and saves
+`screenshots/preview.png`. It closes the browser and server after capture.
+The screenshot workflow also runs on pull requests, pushes to `main`, and manually;
+download the image from its `vue-pgn-viewer-preview` artifact. Generated images are not committed.

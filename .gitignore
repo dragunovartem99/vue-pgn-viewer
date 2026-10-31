@@ -25,3 +25,6 @@ dist-ssr
 
 # Demo preview
 dist-demo
+
+# Generated block captures
+screenshots/
